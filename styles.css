@@ -1,0 +1,158 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f0f0;
+    font-style: italic; /* Make all body text italic */
+    background-image: url('https://i.pinimg.com/736x/c5/9c/d0/c59cd0abae0c86e7e85210aeb2ab7837.jpg'); /* Replace with your background image path */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.content-overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 40px;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.app-title {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.form-step {
+    display: none;
+}
+
+.form-step.active {
+    display: block;
+}
+
+label {
+    display: block;
+    margin: 20px 0 10px;
+    font-weight: 500;
+    font-style: italic; /* Make label text italic */
+}
+
+.input-container {
+    position: relative;
+}
+
+input {
+    width: 100%;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    font-style: italic; /* Make input text italic */
+}
+
+input:focus {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.next-button, .prev-button, .submit-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    font-style: italic; /* Make button text italic */
+}
+
+.next-button {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.next-button:hover {
+    background-color: #45a049;
+}
+
+.prev-button {
+    background-color: #f44336;
+    color: white;
+}
+
+.prev-button:hover {
+    background-color: #e33b2e;
+}
+
+.submit-button {
+    background-color: #008CBA;
+    color: white;
+}
+
+.submit-button:hover {
+    background-color: #007ba7;
+}
+
+#successMessage {
+    display: none; /* Ensure the success message is hidden initially */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.section-content {
+    text-align: center;
+    font-style: italic; /* Make section content text italic */
+}
+
+.success-image {
+    width: 100%;
+    height: auto;
+    max-width: 500px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    animation: zoomIn 3s ease;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
